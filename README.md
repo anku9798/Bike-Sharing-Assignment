@@ -63,12 +63,12 @@ The final equation of the model is:
 
 ### 9. Model Evaluation
 **Training Data:**
-      1. R²: 0.833
-      2. Adjusted R²: 0.829
+- R²: 0.833
+- Adjusted R²: 0.829
 
 **Test Data:**
-      1. R²: 0.8038
-      2. Adjusted R²: 0.7944
+- R²: 0.8038
+- Adjusted R²: 0.7944
 
 The model performs well on both the training and testing datasets, with an R² score of around 80%.
 
