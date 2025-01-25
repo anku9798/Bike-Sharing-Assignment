@@ -1,22 +1,22 @@
 # Bike Demand Prediction
 
 ## Overview
-This project focuses on predicting the demand for bikes based on various factors like temperature, weather conditions, season, and holidays. The dataset contains bike rental information, including features such as temperature, humidity, wind speed, and other categorical variables like the season, weekday, and weather conditions. The goal is to build a linear regression model to predict the bike demand (count).
+This project focuses on predicting the demand for bikes based on various factors like temperature, weather conditions, season, and holidays. The dataset contains bike rental information, including features such as temperature, humidity, wind speed, and other categorical variables like the season, weekday, and weather conditions. The goal is to build a linear regression model to predict the bike demand count.
 
 ## Steps
 
 ### 1. Data Understanding and Preprocessing
 The first step involves reading the dataset and performing some initial data exploration and cleaning:
 
-- **Reading the Data**: The dataset is read using `pd.read_csv()`.
-- **Renaming Columns**: For better readability, some columns are renamed, such as `'yr'` to `'year'` and `'mnth'` to `'month'`.
+- **Reading the Data**: The dataset is read using pd.read_csv().
+- **Renaming Columns**: For better readability, some columns are renamed, such as 'yr' to 'year' and 'mnth' to 'month'.
 - **Checking for Missing Values**: Missing values are checked and handled.
-- **Dropping Unwanted Columns**: Columns that are redundant or not useful for the model, like `'instant'`, `'dteday'`, `'casual'`, and `'registered'`, are dropped.
-- **Encoding Categorical Variables**: Categorical variables like `'season'`, `'month'`, `'weekday'`, and `'weathersit'` are encoded to numerical values.
+- **Dropping Unwanted Columns**: Columns that are redundant or not useful for the model, like 'instant', 'dteday', 'casual', and 'registered', are dropped.
+- **Encoding Categorical Variables**: Categorical variables like 'season', 'month', 'weekday', and 'weathersit' are encoded to numerical values.
 - **Removing Duplicates**: Any duplicate rows are removed from the dataset.
 
 ### 2. Data Exploration and Visualization
-To understand the relationships between different variables and the target variable (`'cnt'`), various visualizations are created:
+To understand the relationships between different variables and the target variable, various visualizations are created:
 
 - **Boxplots**: Boxplots are plotted for categorical columns to check for patterns and outliers.
 - **Bar Plots**: Bar plots are used to visualize the relationship between categorical features and the target variable.
@@ -25,11 +25,11 @@ To understand the relationships between different variables and the target varia
 ### 3. Data Preparation for Modeling
 After exploring the data, the following preprocessing steps are performed:
 
-- **Dummy Variable Creation**: Dummy variables are created for categorical columns like `'season'`, `'month'`, `'weekday'`, and `'weathersit'` using `pd.get_dummies()`.
-- **Scaling Features**: The numerical features are scaled using `MinMaxScaler` to normalize the values and bring them into the same range.
+- **Dummy Variable Creation**: Dummy variables are created for categorical columns like 'season', 'month', 'weekday', and 'weathersit' using pd.get_dummies().
+- **Scaling Features**: The numerical features are scaled using MinMaxScaler to normalize the values and bring them into the same range.
 
 ### 4. Splitting Data into Train and Test Sets
-The dataset is split into training and testing sets using `train_test_split()`. The training set is used to train the model, and the test set is used to evaluate its performance.
+The dataset is split into training and testing sets using train_test_split(). The training set is used to train the model, and the test set is used to evaluate its performance.
 
 ### 5. Building the Linear Regression Model
 A linear regression model is built to predict bike demand:
