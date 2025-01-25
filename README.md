@@ -1,6 +1,6 @@
-#Bike Demand Prediction
+# Bike Demand Prediction
 
-##Overview
+## Overview
 This project focuses on predicting the demand for bikes based on various factors like temperature, weather conditions, season, and holidays. The dataset contains bike rental information, including features such as temperature, humidity, wind speed, and other categorical variables like the season, weekday, and weather conditions. The goal is to build a linear regression model to predict the bike demand (count).
 
 ## Steps
@@ -57,22 +57,20 @@ After the model is validated, it is used to make predictions:
 
 ### 8. Final Model Equation
 The final equation of the model is:
-
-```plaintext
-cnt = 0.1909 + 0.2341 * year - 0.0963 * holiday + 0.4777 * temp - 0.1481 * windspeed + 
-      0.0910 * sep - 0.2850 * Light_snowrain - 0.0787 * Misty - 0.0554 * spring + 
-      0.0621 * summer + 0.0945 * winter
+            cnt = 0.1909 + 0.2341 * year - 0.0963 * holiday + 0.4777 * temp - 0.1481 * windspeed + 
+            0.0910 * sep - 0.2850 * Light_snowrain - 0.0787 * Misty - 0.0554 * spring + 
+            0.0621 * summer + 0.0945 * winter
 
 ### 9. Model Evaluation
-Training Data:
+**Training Data:**
+      1. R²: 0.833
+      2. Adjusted R²: 0.829
 
-R²: 0.833
-Adjusted R²: 0.829
-Test Data:
+**Test Data:**
+      1. R²: 0.8038
+      2. Adjusted R²: 0.7944
 
-R²: 0.8038
-Adjusted R²: 0.7944
 The model performs well on both the training and testing datasets, with an R² score of around 80%.
 
-###Conclusion
+### Conclusion
 The final model demonstrates that the demand for bikes depends on factors such as year, temperature, wind speed, weather conditions, and season. The model can be used to predict bike demand and help in better planning and resource allocation.
